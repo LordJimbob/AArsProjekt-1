@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/style.css">
+        <title>Søg i database</title>
+    </head>
+<body>
+        <header>
+            <nav class="top">
+            </nav>
+        
+            <h1 class="Jensens-logo">Jensens ApS</h1>
+        </header>
+<div class="search">  
+    <h1>Søg i produktionstegninger</h1>
+    <form action="/search" method="POST" enctype="multipart/form-data">
+        <input type="text" name="query" placeholder="søg...">
+        <button type="submit">søg</button>
+    </form>
+
+    <h1>Søgeresultater</h1>
+
+    {% if results %}
+    <table>
+      <tbody>
+        {% for filename in results %}
+          {% if loop.index0 is divisibleby(5) %}
+            <tr>
+          {% endif %}
+          <td>
+            <div class="test">
+              <p><a href="{{ url_for('download', filename=filename) }}">{{ filename }}</a></p>
+            </div>
+          </td>
+          {% if loop.index is divisibleby(5) or loop.last %}
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    {% if results is defined %}
+      <p>Ingen resultater fundet.</p>
+    {% else %}
+      <p><a href="{{ url_for('download', filename=filename) }}">{{ filename }}</a></p>
+    {% endif %}
+  {% endif %}
+
+<br>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        
+        <input type="file" name="fileToUpload" id="fileToUpload">
+    </br>
+    {% if error %}
+    <p class="error"><ur>{{ error }}</ur></p>
+
+    {% endif %}
+    {% if success %}
+    <p class="success"><ur>{{ success }}</ur></p>
+
+    {% endif %}
+    <br>
+        <button type="submit" name="uploadBtn">Upload fil</button>
+      </br>
+    </form>
+  </br>
+    <br>
+    <form action="/logout" method="POST">
+        <button type="submit" class="btn btn-primary btn-sm">Logud</button>
+    </form>  
+</div> 
+    <footer>
+        <p>Jensens ApS - Dansk kvalitet siden 1973 </p>
+    </footer>  
+</body>
+</html>

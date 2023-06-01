@@ -1,0 +1,183 @@
+body {
+    background-color: white;
+}
+
+nav {
+    background-color: red;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.Jensens-logo {
+    color: red;
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+}
+
+.fotocontainer {
+    margin: auto;
+    width: 50%;
+    max-width: 500px; 
+}
+
+.fotocontainer img {
+    width: 100%;
+    height: auto;
+}
+
+.Kontakt {
+    color: red;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+}
+
+.oplysninger {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+}
+
+.omos {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 25px;
+}
+
+.produkter {
+    color: red;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+} 
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrerer kasserne i midten */
+    margin: 30px; /* Juster afstanden til kanten efter behov */
+}
+
+.box {
+    width: calc(33.33% - 20px); /* Justerer bredden og trækker marginen fra */
+    
+    position: relative;
+    background-color: white;
+    margin: 10px; /* Juster afstanden mellem kasserne efter behov */
+    overflow: hidden; /* Skjuler billedets overskydende del */
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Skalerer billedet og dækker kassen */
+}
+
+
+
+.vardier {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 25px;
+}
+
+.search {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    margin: auto;
+    width: 50%;
+    padding: 25px;
+}
+
+footer {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 20px;
+}
+
+.top {
+    background-color: red;
+    padding: 20px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+}
+.success {
+    color: rgb(62, 168, 0);
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    padding: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .test {
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    color: #333;
+    min-height: 50px;
+    min-width: 100px;
+    margin: 5px;
+  }
