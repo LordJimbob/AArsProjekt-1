@@ -115,7 +115,8 @@ def download(filename):
     if os.path.isfile(value):
         return send_file(value, as_attachment=True)
     else:
-        return "File not found."
+        error =  "Filen findes ikke"
+        return render_template('search.html', error=error)
 
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
